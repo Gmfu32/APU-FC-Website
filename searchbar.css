@@ -1,0 +1,44 @@
+.search-container {
+    margin: 20px auto;
+    max-width: 600px;  
+    margin-top: 20px;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    background: #fff;
+    height: 55px;
+}
+
+form input {
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+form button {
+    background: #222;
+    padding: 10px 50px;
+    border: none;
+    outline: none;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+
+input[type="search"]:focus {
+    border: 2px solid;
+    border-color: darkblue;
+}
+
+button:hover {
+    background-color: #3f3f3f;
+}

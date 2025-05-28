@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs</title>
+<link href="master.css" rel="stylesheet" type="text/css" />
+<link href="FAQs.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<header class="header">
+        <input type="checkbox" class="toggle-sidebar" id="toggle-sidebar">
+        <label for="toggle-sidebar" class="toggle-icon">
+            <div class="bar-top"></div>
+            <div class="bar-center"></div>
+            <div class="bar-bottom"></div>
+        </label>
+        <div class="logo-container">
+            <img src="logos/badge.png" alt="Logo" class="logo">
+            <span class="title">APU FOOTBALL CLUB</span>
+        </div>
+        <div class="header-container">
+            <ul class="nav-links">
+                <li><a href="default.html">HOME</a></li>
+                <li><a href="about-us.html">ABOUT US</a></li>
+                <li><a href="team.html">TEAM</a></li>
+                <li><a href="#join-us.html">JOIN US</a></li>
+            </ul>                
+        </div>
+        <div class="sidebar">
+            <ul class="menu">
+                <li><a href="default.html">Home</a></li>
+                <li><a href="about-us.html">About us</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="statistics.html">Statistics</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="join-us.html">Join us</a></li>
+                <li><a href="history.html">History</a></li>               
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="policies.html">Policies</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+
+        <br/>
+        <br/>
+
+        <h2 style="text-align:center; border-bottom: 1px solid #b1b1b1; margin: 0 200px; font-size: 40px;">FREQUENTLY ASKED QUESTIONS (FAQs)</h2>
+
+        <br/>
+        <br/>
+
+        <div class="wrapper">
+      
+            <div class="faq">
+              <button class="accordion">
+                What is the APU Football Club?
+                <img src="logos/arrow.png">
+              </button>
+              <div class="pannel">
+                <p>
+                The APU Football Club is a student organization at Asia Pacific University that promotes football activities and events for students.
+                </p>
+              </div>
+            </div>
+      
+            <div class="faq">
+              <button class="accordion">
+                Who can join the APU Football Club?
+                <img src="logos/arrow.png">
+              </button>
+              <div class="pannel">
+                <p>
+                Any student enrolled at Asia Pacific University can join the APU Football Club.
+                </p>
+              </div>
+            </div>
+      
+            <div class="faq">
+              <button class="accordion">
+                How can I become a member of the APU Football Club?
+                <img src="logos/arrow.png">
+              </button>
+              <div class="pannel">
+                <p>
+                You can become a member by registering online through our website or by attending one of our club meetings.
+                </p>
+              </div>
+            </div>
+      
+            <div class="faq">
+              <button class="accordion">
+                When and where does the APU Football Club meet?
+                <img src="logos/arrow.png">
+              </button>
+              <div class="pannel">
+                <p>
+                The club meets on Tuesdays or Thursdays at 5:15 PM at the university football field.
+                </p>
+              </div>
+            </div>
+      
+            <div class="faq">
+              <button class="accordion">
+                Are there any membership fees?
+                <img src="logos/arrow.png">
+              </button>
+              <div class="pannel">
+                <p>
+                No, membership to the APU Football Club is completely free for all students.
+                </p>
+              </div>
+            </div>
+      
+            <br/>
+            <br/>
+
+          </div>
+
+          <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+      
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle("active");
+      
+                var pannel = this.nextElementSibling;
+      
+                if (pannel.style.display === "block") {
+                  pannel.style.display = "none";
+                } else {
+                  pannel.style.display = "block";
+                }
+              });
+            }
+          </script>
+
+    </main>
+
+
+    <footer class="footer">
+        FOLLOW US<br/><br/>
+        <a href="https://www.facebook.com/apuniversity" target="_blank" class="social-icon">
+            <img src="logos/facebook.png" alt="Facebook" />
+        </a>
+        <a href="https://x.com/AsiaPacificU" target="_blank" class="social-icon">
+            <img src="logos/twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com/asiapacificuniversity/" target="_blank" class="social-icon">
+            <img src="logos/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com/school/apumalaysia/" target="_blank" class="social-icon">
+            <img src="logos/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://www.youtube.com/c/AsiaPacificUniversityKualaLumpur" target="_blank" class="social-icon">
+            <img src="logos/youtube.png" alt="YouTube" />
+        </a>
+        <br/>
+        <br/>
+        &copy; 2024 ASIA PACIFIC UNIVERSITY OF TECHNOLOGY & INNOVATION (APU). ALL RIGHTS RESERVED.<br/>
+    </footer>
+
+</body>
+</html>    

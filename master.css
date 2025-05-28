@@ -1,0 +1,186 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes up at least the full viewport height */
+}
+
+.header {
+    display: flex;
+    background: black;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    position: sticky; /* Ensure it has positioning context for the absolute elements */
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: relative; /* Ensure it’s positioned relative to contain absolute elements */
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    background: white;
+    color: darkblue;
+    border-radius: 4px;
+}
+
+.sidebar {
+    background: black;
+    color: white;
+    height: calc(100% - 60px);
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    margin-top: 60px; /* Adjust to the height of the header */
+    overflow-y: auto;
+}
+
+.menu li a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+.menu li:hover {
+    background: white;
+    color: darkblue;
+    transition: all 0.3s;
+}
+
+.logo-container {
+    position: absolute;
+    left: 70px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto; 
+}
+
+.title {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 30px; /* Increase width to better align */
+    height: 22px;
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.toggle-icon div {
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 3px;
+    transition: all 0.3s;
+}
+
+.bar-center {
+    margin: 6px 0; /* Increase margin to better space bars */
+}
+
+input[type="checkbox"] {
+    display: none; /* Hide the checkbox itself */
+}
+
+input[type="checkbox"]:checked ~ .sidebar {
+    transform: translateX(0);
+}
+
+input[type="checkbox"]:checked ~ .toggle-icon > .bar-top {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+input[type="checkbox"]:checked ~ .toggle-icon > .bar-center {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .toggle-icon > .bar-bottom {
+    transform: rotate(-135deg);
+    margin-top: -17px;
+}
+
+.main-content {
+    flex: 1;
+    position: relative;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.footer {
+    background: black;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px; 
+}
+
+.social-icon img {
+    width: 24px; 
+    height: 24px; 
+    vertical-align: middle; 
+    transition: opacity 0.3s; 
+}
+
+.social-icon img:hover {
+    opacity: 0.7;
+}
